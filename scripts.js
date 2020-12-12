@@ -26,7 +26,7 @@ var scoreBlock = document.getElementById("scoreBlock");
 var scoreMessage = document.getElementById("scoreMessage");
 var quizAgain = document.getElementById("quizAgain");
 
-let questions = [{
+var questions = [{
     question: "What is 1 + 1?",
     choiceA: "1",
     choiceB: "2",
@@ -106,7 +106,7 @@ function callPhpFile(){
 		  myFunction(this);
 		}
 	};
-	xhr.open("GET", "createQuestions.php");
+	xhr.open("GET", "/campus-rush-main/createQuestions.php");
 	xhr.send();
 	xhr.onload = function () {
 		var javar = this.response;
@@ -114,20 +114,23 @@ function callPhpFile(){
 	};
 	xhr.onload = function() {
 		if (xhr.status != 200) {
-			alert(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
+			alert('Error '+xhr.status+': '+xhr.statusText); // e.g. 404: Not Found
 		} else { // xhr.responseXML is the server response
 			var questDoc, qList, qs, as, i;
 			questDoc = xhr.responseXML;
-			qs = questDoc.getElementsById("question");
-			as = questDoc.getElementsById("answer");
-			qList = [];
-			for (i = 0; i < x.length; i++){
-				qList.push({question: qs[i].nodeValue,
-					choiceA: as[i*5+0].nodeValue,
-					choiceB: as[i*5+1].nodeValue,
-					choiceC: as[i*5+2].nodeValue,
-					choiceD: as[i*5+3].nodeValue,
-					correctAnswer: as[i*5+4].nodeValue});
+			console.log(questDoc);
+			if (questDoc != null) { //update questions from default
+				qs = questDoc.getElementsById("question");
+				as = questDoc.getElementsById("answer");
+				qList = [];
+				for (i = 0; i < x.length; i++){
+					qList.push({question: qs[i].nodeValue,
+						choiceA: as[i*5+0].nodeValue,
+						choiceB: as[i*5+1].nodeValue,
+						choiceC: as[i*5+2].nodeValue,
+						choiceD: as[i*5+3].nodeValue,
+						correctAnswer: as[i*5+4].nodeValue});
+				}
 			}
 		}
 	};
@@ -135,6 +138,7 @@ function callPhpFile(){
 
 //getQuestion function
 function getQuestion() {
+	callPhpFile();
   choiceResponse.style.display = "none";
   let q = questions[questionIndex];
   quizQuestion.innerHTML = "<p>Question " +(questionIndex+1) + ": " + q.question + "</p>";
