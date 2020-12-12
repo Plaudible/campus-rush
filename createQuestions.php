@@ -33,7 +33,6 @@ if ($row['level'] == 1) {
 
 // correct answer may be an issue
 
-
 $js_array =  json_encode($letLevelOneQuetions);
 echo $js_array;
 
