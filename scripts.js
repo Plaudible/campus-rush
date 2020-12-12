@@ -137,7 +137,6 @@ function callPhpFile(){
 
 //getQuestion function
 function getQuestion() {
-	callPhpFile();
   choiceResponse.style.display = "none";
   let q = questions[questionIndex];
   quizQuestion.innerHTML = "<p>Question " +(questionIndex+1) + ": " + q.question + "</p>";
@@ -151,6 +150,7 @@ function getQuestion() {
 
 // start quiz
 function beginQuiz() {
+  callPhpFile();//update questions array
   start.style.display ="none";
   getQuestion();
   quiz.style.display = "block";
