@@ -178,10 +178,10 @@ function showScore() {
 //function to check if answer is correct
 function check(answer) {
   if (questionIndex < questions.length - 1) {
-    getQuestion();
+    setTimeout(getQuestion,500);
 }
   else {
-    showScore();
+    setTimeout(showScore,500);
 }
 
 if (answer == questions[questionIndex].correctAnswer) {
@@ -190,14 +190,12 @@ if (answer == questions[questionIndex].correctAnswer) {
   choices.style.display = "none";
   choiceResponse.innerHTML= '<p style="color:green">Correct!</p>';
   choiceResponse.style.display = "block";
-  setTimeout(getQuestion,500);
 }
 else {
   questionIndex++;
   choices.style.display = "none";
   choiceResponse.innerHTML= '<p style="color:red">Incorrect!</p>';
   choiceResponse.style.display = "block";
-  setTimeout(getQuestion,500);
   }
 }
 
