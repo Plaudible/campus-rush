@@ -6,8 +6,8 @@ Campus Rush is an interactive quiz making program that allows people to set-up a
 # HOW-TO USE
 1. As we don't currently have a registered domain, host the webpage on a server locally.
 2. Start at index.html, sign-up using e-mail and password, then login.
-3. Create question set to generate a code.
-4. Distribute code to take quiz, and have fun!
+3. Press "Play"
+4. Have fun!
 
 # CREDITS
 * Maxwell Bockmann - front-end, visuals, Pixi.JS and documentation
