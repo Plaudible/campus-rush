@@ -1,11 +1,15 @@
 ![alt text](https://i.imgur.com/VoCBTt4.png)
-# Developed by Tiara Logan, Maxwell Bockmann, Dounglan Cheung, Jeremy Gavrilov and Wendy Hessner
+# Developed by Tiara Logan, Maxwell Bockmann, Dounglan Cheung, Jeremy Gavrilov and Wendy Hesser
 
 Campus Rush is an interactive quiz making program that allows people to set-up a simple quiz environment for students to test their knowledge. It's designed to be simple and direct for ease of access.
 
 # HOW-TO USE
 1. As we don't currently have a registered domain, host the webpage on a server locally.
-2. Start at index.html, sign-up using e-mail and password, then login.
+   a. Download the files from the GitHub to their own folder where local host can access them (e.g. "C:\xampp\htdocs" in a Windows 10 system)
+   c. Open XAMPP's control panel on your desktop.
+   b. Start the Apache and MySQL modules
+   d. Open a new browser tab to "http://localhost/campus-rush-main"
+2. Sign-up using e-mail and password, then login.
 3. Press "Play" and have fun!
 
 # CREDITS
@@ -13,4 +17,4 @@ Campus Rush is an interactive quiz making program that allows people to set-up a
 * Dounglan Cheung - Game logic, question/answer flow
 * Tiara Logan - Login/authentication, database management
 * Jeremy Gavrilov - I/O, session and database management
-* Wendy Hessner - I/O, Proofing
+* Wendy Hesser - I/O, Proofing
