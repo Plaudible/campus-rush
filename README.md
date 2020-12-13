@@ -6,8 +6,8 @@ Campus Rush is an interactive quiz making program that allows people to set-up a
 # HOW-TO USE
 1. As we don't currently have a registered domain, host the webpage on a server locally.
    a. Download the files from the GitHub to their own folder where local host can access them (e.g. "C:\xampp\htdocs" in a Windows 10 system)
-   c. Open XAMPP's control panel on your desktop.
-   b. Start the Apache and MySQL modules
+   b. Open XAMPP's control panel on your desktop.
+   c. Start the Apache and MySQL modules
    d. Open a new browser tab to "http://localhost/campus-rush-main"
 2. Sign-up using e-mail and password, then login.
 3. Press "Play" and have fun!
