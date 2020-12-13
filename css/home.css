@@ -215,4 +215,56 @@ body {background-color: #e09be0;}
   text-align: center;
 }
 
+.label{
 
+  font-family: 'pixPixelFJVerdana12pt';
+
+  font-size:15px;
+  padding: 10px 10px 10px 10px;
+  display: block;
+  text-align: center;
+}
+
+.input {
+  font-family: 'pixPixelFJVerdana12pt';
+font-size: 18px;
+line-height: 1.2;
+color: #686868;
+display: block;
+width: 25%;
+background: #e6e6e6;
+height: 62px;
+border-radius: 3px;
+padding: 0 10px 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonlogin {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font: inherit;
+  font-family: 'pixPixelFJVerdana12pt';
+  background-color: #aa49b4;
+  border-style: dashed;
+  box-shadow: 0 9px #999;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonlogin:hover {
+  background-color: #ffe031;
+  transition: all .2s ease-in;
+}
+
+.buttonlogin:active {
+  background-color: #ffe031;
+  box-shadow: 0 5px #777;
+  transform: translateY(4px);
+  
+}
